@@ -129,22 +129,26 @@ const Home = () => {
       },
       { threshold: 0.5 }
     );
-
-    if (countersRefs.current[0]) {
-      countersRefs.current.forEach((ref) => {
+  
+    const currentRefs = countersRefs.current;
+    if (currentRefs[0]) {
+      currentRefs.forEach((ref) => {
         observer.observe(ref);
       });
     }
-
+  
     return () => {
-      if (countersRefs.current[0]) {
-        countersRefs.current.forEach((ref) => {
+      if (currentRefs[0]) {
+        currentRefs.forEach((ref) => {
           observer.unobserve(ref);
         });
       }
     };
   }, [hasCounted]);
-
+  
+  if (submitted) {
+    // Display a message or navigate to another page
+  }
   const animateCounts = () => {
     const duration = 1000; // 1 second
     const intervalTime = 10; // Interval time in ms
