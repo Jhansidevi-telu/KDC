@@ -557,7 +557,7 @@ const Home = () => {
                       aria-label="Message"
                     ></textarea>
                   </div>
-                  <button type="submit" className="btn send-btn ">
+                  <button type="submit" className=" send-btn">
                     <span className="text-light">Send</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

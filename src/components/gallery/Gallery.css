@@ -97,14 +97,7 @@
     margin: 0 auto;
   }
   
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
+
   .btn-close {
     color: white;
     filter: invert(1); /* Ensures the close icon remains white regardless of background */
