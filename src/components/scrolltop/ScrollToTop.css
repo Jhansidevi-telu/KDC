@@ -1,0 +1,37 @@
+/* Default ScrollToTop button styling */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #b91c1c; /* Red background */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Make button visible when `visible` class is added */
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+  background-color: #9b1313; /* Darker red for hover */
+}
+
+/* Hide ScrollToTop on small screens */
+@media (max-width: 576px) {
+  .scroll-to-top {
+    display: none; /* Completely hide the button */
+  }
+}

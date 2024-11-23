@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* Common Social Icons */
+.social-icons {
+  top: 50%; /* Center vertically */
+  right: 20px; /* Fixed to the right */
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.social-icons a {
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white; /* Icon color */
 }
 
-.App-link {
-  color: #61dafb;
+/* Floating Action Button for Small Screens */
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #991b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fab-icons {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  color: #fff;
+  z-index: 1000;
+}
+
+.fab-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white; /* Icon color */
+  font-size: 1.2rem;
 }

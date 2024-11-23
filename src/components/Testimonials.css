@@ -1,0 +1,200 @@
+.card-wrapper {
+  padding: 15px;
+  margin: 0 10px; /* Add horizontal margin to create space between cards */
+}
+
+
+/* Apply blur effect to cards that are not in the middle */
+.card-wrapper:not(.middle-card) .review-card {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+/* Text styling within the card */
+.review-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.name {
+  font-size: 1rem;
+  color: #0e0e0e;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.review-card {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: -1; /* Make sure the icon stays behind the content */
+}
+
+.quote-icon-back {
+  font-size: 68px;
+  color: #450a0a; /* Adjust the color to make it blend with the background */
+}
+
+.review-content {
+  position: relative;
+  padding-left: 42px; /* Add space to prevent overlap with the icon */
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+/* 
+.author-info .name {
+  font-weight: bold;
+  color: #555;
+} */
+
+/* Carousel Dots */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #333;
+}
+
+.slick-prev,
+.slick-next {
+  color: #333;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Adjust arrow position */
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -35px;
+}
+
+/* Effect for the middle card */
+.middle-card .review-card {
+  transform: scale(1.05);
+  background-color: #f8fdee;
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive for small screens */
+@media (max-width: 576px) {
+  .review-card {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  /* Remove blur effect for non-middle cards on small screens */
+  .card-wrapper:not(.middle-card) .card {
+    filter: none; /* Disable blur effect on small screens */
+    opacity: 1; /* Ensure visibility */
+  }
+}
+
+/* Icon color */
+.icon-color {
+  color: #b91c1c;
+}
+/* General styles for the middle card */
+.middle-card .highlight-card {
+  background-color: #b91c1c; /* Red background for middle card */
+  color: #fff; /* Ensure text is visible */
+  transform: scale(1.1); /* Emphasize middle card */
+  filter: none;
+  opacity: 1;
+}
+
+/* Darker quote icon for middle card */
+.middle-quote-icon {
+  color: #7f0f0f; /* Darker shade of red for the icon */
+}
+
+/* Adjust review text for middle card */
+.middle-card .review-card .name {
+  color: #fff;
+  font-weight: 400;
+  font-style: italic;
+}
+.middle-card .review-card .review-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 576px) {
+  /* Apply the red background to the first card on small screens */
+  .first-card .review-card {
+    background-color: #b91c1c; /* Red background for the first card */
+    color: #fff; /* Ensure text is visible */
+  }
+
+  /* No scaling on mobile for better usability */
+  .middle-card .highlight-card {
+    transform: scale(1); /* No scaling on mobile */
+    background-color: #b91c1c; /* Red background remains for middle card */
+  }
+
+  .review-card {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  /* Apply no blur effect for non-middle cards on small screens */
+  .card-wrapper:not(.middle-card) .review-card {
+    filter: none; /* Disable blur effect on small screens */
+    opacity: 1; /* Ensure visibility */
+  }
+
+  /* Ensure that the middle card content is centered */
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Avatar size and styling on mobile */
+  .author-info {
+    margin-top: 15px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .name {
+    font-size: 0.9rem;
+  }
+}
