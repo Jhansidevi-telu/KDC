@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import video from "../assets/videos/hero1.mp4";
-import home from "../assets/home.jpg";
 import event1 from "../assets/event1.jpg";
 import event2 from "../assets/event2.jpg";
 import event3 from "../assets/event3.jpg";
@@ -10,9 +9,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhoneAlt,
-  FaQuoteLeft,
 } from "react-icons/fa";
-import { MdAddIcCall, MdEmail } from "react-icons/md";
 import Testimonials from "../components/Testimonials";
 
 const countersData = [
