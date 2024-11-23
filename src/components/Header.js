@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-import "./Header.css"
+import "./Header.css";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg  ">
@@ -35,12 +36,12 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/gallery" >
-                Gallery
-              </a>
+              <Link to="/gallery">
+                <a className="nav-link">Gallery</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link"  href="/">
+              <a className="nav-link" href="/">
                 Contact
               </a>
             </li>
